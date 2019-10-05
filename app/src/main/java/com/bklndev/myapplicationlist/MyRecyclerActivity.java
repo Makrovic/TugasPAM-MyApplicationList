@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
 public class MyRecyclerActivity extends AppCompatActivity {
+    //dataset yang berisi daftar pemain dan posisi
     String[] players = {"Cristiano Ronaldo","Wojciech Szczęsny","Mattia De Sciglio","Blaise Matuidi","Paulo Dybala","Aaron Ramsey",
             "Sami Khedira"," Miralem Pjanić","Matthijs de Ligt"," Giorgio Chiellini","Douglas Costa"};
     String[] position = {"Forward","Goalkick","Defensive","Midfielder","Forward","Midfielder",
@@ -21,6 +22,7 @@ public class MyRecyclerActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.rv);
 
+        //https://developer.android.com/guide/topics/ui/layout/recyclerview
         recyclerView.setHasFixedSize(true);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);

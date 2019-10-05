@@ -14,10 +14,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //instansiasi button yang telah di buat di xml main activity
         Button btnList = findViewById(R.id.btn_list);
         Button btnCustom = findViewById(R.id.btn_custom);
         Button btnRecycler = findViewById(R.id.btn_recycler);
 
+        //menset event untuk button yang telah diinstansiasi
+        //dengan fungsi yang dibuat di bawah
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //membuat fungsi yang berisi intent untuk komunikasi ke activity lain
     private void intentList(){
         Intent in = new Intent(this,MyListActivity.class);
         startActivity(in);
